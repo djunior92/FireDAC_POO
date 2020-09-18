@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/08/07 10:14:39.000.979,=C:\Users\Juninho\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2020/09/17 21:33:32.000.792,=C:\Users\Juninho\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/09/17 21:36:43.000.968,C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\uFrmConsulta.pas=C:\Users\Juninho\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/09/17 21:36:43.000.968,C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\uFrmConsulta.dfm=C:\Users\Juninho\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2020/09/17 21:48:54.000.456,C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\fontes\pFireDAC_POO.dproj=C:\Users\Juninho\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2020/09/17 22:04:25.000.447,=C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\fontes\Unit2.pas</Transaction>
+    <Transaction>2020/09/17 22:04:37.000.497,C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\fontes\uFrmLembreteEditar.pas=C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\fontes\Unit2.pas</Transaction>
+    <Transaction>2020/09/17 22:04:37.000.497,C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\fontes\uFrmLembreteEditar.dfm=C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\fontes\Unit2.dfm</Transaction>
+    <Transaction>2020/09/17 22:05:34.000.136,C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\fontes\uFrmLembreteEditar.pas=</Transaction>
+    <Transaction>2020/09/17 22:05:56.000.608,=C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\fontes\Unit1.pas</Transaction>
+    <Transaction>2020/09/17 22:06:30.000.199,C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\fontes\uFrmLembreteEditar.dfm=C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\fontes\Unit1.dfm</Transaction>
+    <Transaction>2020/09/17 22:06:30.000.199,C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\fontes\uFrmLembreteEditar.pas=C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\fontes\Unit1.pas</Transaction>
+    <Transaction>2020/09/17 22:19:26.000.492,=C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\fontes\Unit1.pas</Transaction>
+    <Transaction>2020/09/17 22:19:56.000.180,C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\fontes\Unit1.dfm=C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\fontes\uFrmLembreteInserir.dfm</Transaction>
+    <Transaction>2020/09/17 22:19:56.000.180,C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\fontes\Unit1.pas=C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\fontes\uFrmLembreteInserir.pas</Transaction>
+    <Transaction>2020/09/17 22:22:55.000.029,=C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\fontes\Unit1.pas</Transaction>
+    <Transaction>2020/09/17 22:29:59.000.666,C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\fontes\Unit1.dfm=C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\fontes\uDm.dfm</Transaction>
+    <Transaction>2020/09/17 22:29:59.000.666,C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\fontes\Unit1.pas=C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\fontes\uDm.pas</Transaction>
+    <Transaction>2020/09/17 22:32:08.684,=C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\uFrmConsulta.pas</Transaction>
+    <Transaction>2020/09/17 22:33:30.439,=C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\Unit1.pas</Transaction>
+    <Transaction>2020/09/17 22:33:44.627,C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\DAO\uBaseDAO.pas=C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\Unit1.pas</Transaction>
+    <Transaction>2020/09/17 22:41:43.346,=C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\Unit1.pas</Transaction>
+    <Transaction>2020/09/17 22:41:53.876,C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\DAO\uLembreteDAO.pas=C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\Unit1.pas</Transaction>
+    <Transaction>2020/09/17 23:02:09.935,=C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\Model\uLembrete.pas</Transaction>
+  </Transactions>
+</BorlandProject>
