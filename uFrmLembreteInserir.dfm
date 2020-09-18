@@ -147,15 +147,12 @@ object frmLembreteInserir: TfrmLembreteInserir
       Width = 361
       Height = 21
       TabOrder = 0
-      Text = 'edtTitulo'
     end
     object mmDescricao: TMemo
       Left = 72
       Top = 45
       Width = 361
       Height = 89
-      Lines.Strings = (
-        'mmDescricao')
       TabOrder = 1
     end
     object dtpDataHora: TDateTimePicker

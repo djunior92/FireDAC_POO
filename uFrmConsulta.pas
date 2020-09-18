@@ -25,11 +25,14 @@ type
     procedure bInserirClick(Sender: TObject);
     procedure bExcluirClick(Sender: TObject);
     procedure bPesquisarClick(Sender: TObject);
+    procedure bAlterarClick(Sender: TObject);
+    procedure ListView1DblClick(Sender: TObject);
   private
     { Private declarations }
     _LembreteDAO: TLembreteDAO;
     procedure CarregarColecao;
     procedure PreencherListView(pListaLembrete: TList<TLembrete>);
+    procedure EditarLembrete;
   public
     { Public declarations }
   end;
@@ -44,15 +47,32 @@ uses
 
 {$R *.dfm}
 
+procedure TfrmConsulta.bAlterarClick(Sender: TObject);
+begin
+EditarLembrete;
+end;
+
+procedure TfrmConsulta.EditarLembrete;
+begin
+  try
+    FrmLembreteEditar := TFrmLembreteEditar.Create
+     (Self, TLembrete(ListView1.ItemFocused.Data));
+    FrmLembreteEditar.ShowModal;
+    CarregarColecao;
+  finally
+    FreeAndNil(FrmLembreteEditar);
+  end;
+end;
+
 procedure TfrmConsulta.bExcluirClick(Sender: TObject);
 begin
-  if MessageDlg('Deseja remover este item?',
-    mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+  if MessageDlg('Deseja remover este item?', mtConfirmation,
+    [mbYes, mbNo], 0) = mrYes then
   begin
     if ListView1.ItemIndex > -1 then
     begin
-      if _LembreteDAO.Deletar(TLembrete
-        (ListView1.ItemFocused.Data)) then
+      if _LembreteDAO.Deletar
+       (TLembrete(ListView1.ItemFocused.Data)) then
         CarregarColecao;
     end;
   end;
@@ -124,6 +144,11 @@ begin
     on e: exception do
       raise Exception.Create(E.Message);
   end;
+end;
+
+procedure TfrmConsulta.ListView1DblClick(Sender: TObject);
+begin
+EditarLembrete;
 end;
 
 end.

@@ -245,6 +245,8 @@ object frmConsulta: TfrmConsulta
         00CE6300CE6300CE6300FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF63
         63639C9C9C9C9C9C848484848484848484848484848484848484}
       NumGlyphs = 2
+      OnClick = bAlterarClick
+      ExplicitTop = 6
     end
     object bExcluir: TSpeedButton
       AlignWithMargins = True
@@ -317,8 +319,10 @@ object frmConsulta: TfrmConsulta
       FFFFFFFFFFFFFF00000000FFFFFFFF000000000000000000FFFFFFFFFFFFFFFF
       00000000FFFFFFFF000000000000000000FFFFFFFFFFFFFFFF00000000FFFFFF
       FF0000000000}
+    RowSelect = True
     TabOrder = 3
     ViewStyle = vsReport
+    OnDblClick = ListView1DblClick
     ExplicitTop = 78
   end
 end
