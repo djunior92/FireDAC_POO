@@ -1,25 +1,29 @@
 object frmLembreteInserir: TfrmLembreteInserir
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
   Caption = 'Inserir Lembrete'
-  ClientHeight = 216
-  ClientWidth = 555
+  ClientHeight = 231
+  ClientWidth = 454
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  KeyPreview = True
   OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
+  OnKeyDown = FormKeyDown
   PixelsPerInch = 96
   TextHeight = 13
   object Panel3: TPanel
     Left = 0
-    Top = 172
-    Width = 555
+    Top = 187
+    Width = 454
     Height = 44
     Align = alBottom
     Color = 14079702
@@ -27,11 +31,11 @@ object frmLembreteInserir: TfrmLembreteInserir
     TabOrder = 0
     object bInserir: TSpeedButton
       AlignWithMargins = True
-      Left = 4
+      Left = 244
       Top = 4
       Width = 100
       Height = 36
-      Align = alLeft
+      Align = alRight
       Caption = 'Salvar'
       Glyph.Data = {
         AA030000424DAA03000000000000360000002800000011000000110000000100
@@ -70,7 +74,7 @@ object frmLembreteInserir: TfrmLembreteInserir
     end
     object bExcluir: TSpeedButton
       AlignWithMargins = True
-      Left = 451
+      Left = 350
       Top = 4
       Width = 100
       Height = 36
@@ -115,50 +119,50 @@ object frmLembreteInserir: TfrmLembreteInserir
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 555
-    Height = 172
+    Width = 454
+    Height = 187
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
     object Label1: TLabel
       Left = 40
-      Top = 16
+      Top = 48
       Width = 26
       Height = 13
       Caption = 'T'#237'tulo'
     end
     object Label2: TLabel
       Left = 20
-      Top = 48
+      Top = 80
       Width = 46
       Height = 13
       Caption = 'Descri'#231#227'o'
     end
     object Label3: TLabel
       Left = 8
-      Top = 148
+      Top = 19
       Width = 58
       Height = 13
       Caption = 'Data e Hora'
     end
     object edtTitulo: TEdit
       Left = 72
-      Top = 13
+      Top = 45
       Width = 361
       Height = 21
       TabOrder = 0
     end
     object mmDescricao: TMemo
       Left = 72
-      Top = 45
+      Top = 77
       Width = 361
       Height = 89
       TabOrder = 1
     end
     object dtpDataHora: TDateTimePicker
       Left = 72
-      Top = 144
-      Width = 177
+      Top = 15
+      Width = 105
       Height = 21
       Date = 44091.923213611110000000
       Time = 44091.923213611110000000

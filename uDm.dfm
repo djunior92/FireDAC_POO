@@ -5,12 +5,13 @@ object dm: Tdm
   object FDConnection: TFDConnection
     Params.Strings = (
       
-        'Database=C:\Users\Juninho\Desktop\FIREDAC_CRUD_POO\dados\DBDATA.' +
-        'FDB'
+        'Database=D:\Programas\DXE10\Programas\FireDAC_POO\dados\DBDATA.F' +
+        'DB'
       'User_Name=SYSDBA'
       'Password=masterkey'
       'DriverID=FB')
     Connected = True
+    LoginPrompt = False
     Left = 64
     Top = 56
   end

@@ -1,9 +1,10 @@
 object frmConsulta: TfrmConsulta
   Left = 0
   Top = 0
-  Caption = 'Listagem de Lembretes'
-  ClientHeight = 396
-  ClientWidth = 485
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  ClientHeight = 406
+  ClientWidth = 468
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,23 +15,29 @@ object frmConsulta: TfrmConsulta
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
-  object frmConsulta: TPanel
+  object pnTitulo: TPanel
     Left = 0
     Top = 0
-    Width = 485
+    Width = 468
     Height = 41
     Align = alTop
     BevelOuter = bvNone
     Color = 6570553
     ParentBackground = False
     TabOrder = 0
-    object Label1: TLabel
-      Left = 149
-      Top = 11
-      Width = 177
-      Height = 22
+    ExplicitWidth = 485
+    object lTitulo: TLabel
+      AlignWithMargins = True
+      Left = 3
+      Top = 10
+      Width = 462
+      Height = 28
+      Margins.Top = 10
+      Align = alClient
+      Alignment = taCenter
       Caption = 'Lista de Lembretes'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWhite
@@ -38,17 +45,22 @@ object frmConsulta: TfrmConsulta
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
+      ExplicitLeft = 149
+      ExplicitTop = 11
+      ExplicitWidth = 316
+      ExplicitHeight = 22
     end
   end
-  object Panel2: TPanel
+  object pnBusca: TPanel
     Left = 0
     Top = 41
-    Width = 485
+    Width = 468
     Height = 39
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 1
-    object Label2: TLabel
+    ExplicitWidth = 485
+    object lBusca: TLabel
       Left = 4
       Top = 15
       Width = 82
@@ -63,7 +75,7 @@ object frmConsulta: TfrmConsulta
     end
     object bPesquisar: TSpeedButton
       AlignWithMargins = True
-      Left = 382
+      Left = 365
       Top = 3
       Width = 100
       Height = 33
@@ -107,26 +119,28 @@ object frmConsulta: TfrmConsulta
     object edtTituloBusca: TEdit
       Left = 92
       Top = 10
-      Width = 279
+      Width = 267
       Height = 21
       TabOrder = 0
     end
   end
-  object Panel3: TPanel
+  object pnRodape: TPanel
     Left = 0
-    Top = 352
-    Width = 485
+    Top = 362
+    Width = 468
     Height = 44
     Align = alBottom
     BevelOuter = bvNone
     Color = 14079702
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 352
+    ExplicitWidth = 485
     object bInserir: TSpeedButton
       AlignWithMargins = True
       Left = 3
       Top = 3
-      Width = 120
+      Width = 150
       Height = 38
       Align = alLeft
       Caption = 'Inserir'
@@ -187,11 +201,11 @@ object frmConsulta: TfrmConsulta
     end
     object bAlterar: TSpeedButton
       AlignWithMargins = True
-      Left = 129
+      Left = 159
       Top = 3
-      Width = 120
+      Width = 150
       Height = 38
-      Align = alLeft
+      Align = alClient
       Caption = 'Alterar'
       Glyph.Data = {
         36060000424D3606000000000000360000002800000020000000100000000100
@@ -246,13 +260,12 @@ object frmConsulta: TfrmConsulta
         63639C9C9C9C9C9C848484848484848484848484848484848484}
       NumGlyphs = 2
       OnClick = bAlterarClick
-      ExplicitTop = 6
     end
     object bExcluir: TSpeedButton
       AlignWithMargins = True
-      Left = 362
+      Left = 315
       Top = 3
-      Width = 120
+      Width = 150
       Height = 38
       Align = alRight
       Caption = 'Excluir'
@@ -292,14 +305,13 @@ object frmConsulta: TfrmConsulta
         C805049605048B05048E05048E05048E05048E05048B0504962A1AC75E56EEB3
         A9F700CC9900CC990000}
       OnClick = bExcluirClick
-      ExplicitTop = 6
     end
   end
-  object ListView1: TListView
+  object lvLembrete: TListView
     Left = 0
     Top = 80
-    Width = 485
-    Height = 272
+    Width = 468
+    Height = 282
     Align = alClient
     Columns = <
       item
@@ -322,7 +334,9 @@ object frmConsulta: TfrmConsulta
     RowSelect = True
     TabOrder = 3
     ViewStyle = vsReport
-    OnDblClick = ListView1DblClick
+    OnDblClick = lvLembreteDblClick
     ExplicitTop = 78
+    ExplicitWidth = 485
+    ExplicitHeight = 272
   end
 end

@@ -39,7 +39,8 @@ begin
   FIDLembrete := 0;
   FTitulo     := '';
   FDescricao  := '';
-  FDataHora   := EncodeDate(1900,1,1);
+  FDataHora   := now;
+  //FDataHora   := EncodeDate(1900,1,1);
 end;
 
 procedure TLembrete.SetDataHora(const Value: TDateTime);

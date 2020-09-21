@@ -83,9 +83,11 @@ var
   Sql: String;
 begin
   Result := Nil;
+
   Sql := ' SELECT C.IDLembrete, C.Titulo,             '+
          '        C.Descricao, C.DataHora             '+
          '   FROM Lembrete C                          ';
+
   if pConteudo = '' then
     Sql := Sql + ' WHERE C.DataHora >= ' + QuotedStr(FormatDateTime('yyyy-mm-dd', Now))
   else
@@ -94,7 +96,7 @@ begin
                  '     OR C.Descricao like ' + QuotedStr('%'+pConteudo+'%');
   end;
 
-  Sql := Sql + '  ORDER BY C.DataHora     ';
+  Sql := Sql + '  ORDER BY C.IDLembrete     ';
   _FQry := RetornarDataSet(Sql);
 
   if not (_FQry.IsEmpty) then

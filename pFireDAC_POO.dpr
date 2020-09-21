@@ -14,10 +14,9 @@ uses
 
 begin
   Application.Initialize;
+  ReportMemoryLeaksOnShutdown := True;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TfrmConsulta, frmConsulta);
   Application.CreateForm(TfrmLembreteEditar, frmLembreteEditar);
-  Application.CreateForm(TfrmLembreteInserir, frmLembreteInserir);
-  Application.CreateForm(Tdm, dm);
   Application.Run;
 end.

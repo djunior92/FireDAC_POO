@@ -24,6 +24,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure bExcluirClick(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
     { Private declarations }
     _LembreteDAO: TLembreteDAO;
@@ -40,14 +41,22 @@ implementation
 
 {$R *.dfm}
 
+procedure TfrmLembreteInserir.PreencherLembrete;
+begin
+  _Lembrete.Titulo    := EdtTitulo.Text;
+  _Lembrete.Descricao := MmDescricao.Text;
+  _Lembrete.DataHora  := DtpDataHora.DateTime;
+end;
+
 procedure TfrmLembreteInserir.bExcluirClick(Sender: TObject);
 begin
-close;
+  close;
 end;
 
 procedure TfrmLembreteInserir.bInserirClick(Sender: TObject);
 begin
  PreencherLembrete;
+
   if _LembreteDAO.Inserir(_Lembrete) then
   begin
     ShowMessage('Registro Inserido com sucesso');
@@ -75,11 +84,11 @@ begin
   end;
 end;
 
-procedure TfrmLembreteInserir.PreencherLembrete;
+procedure TfrmLembreteInserir.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
 begin
-  _Lembrete.Titulo    := EdtTitulo.Text;
-  _Lembrete.Descricao := MmDescricao.Text;
-  _Lembrete.DataHora  := DtpDataHora.DateTime;
+  if key = VK_ESCAPE then
+    close;
 end;
 
 end.

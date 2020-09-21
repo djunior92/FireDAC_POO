@@ -8,7 +8,6 @@ uses FireDAC.Comp.Client, FireDAC.DApt, System.SysUtils, uDm, Data.DB, Vcl.Dialo
 type
   TBaseDAO = Class(TObject)
   private
-
   protected
     _FQry: TFDQuery;
     constructor Create;

@@ -11,6 +11,7 @@ type
   TfrmLembreteEditar = class(TForm)
     Panel3: TPanel;
     bInserir: TSpeedButton;
+    bExcluir: TSpeedButton;
     Panel1: TPanel;
     Label1: TLabel;
     Label2: TLabel;
@@ -18,10 +19,10 @@ type
     edtTitulo: TEdit;
     mmDescricao: TMemo;
     dtpDataHora: TDateTimePicker;
-    bExcluir: TSpeedButton;
     procedure bInserirClick(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure bExcluirClick(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
  private
     _LembreteDAO: TLembreteDAO;
     _Lembrete: TLembrete;
@@ -41,8 +42,21 @@ implementation
 
 {$R *.dfm}
 
-constructor TFrmLembreteEditar.Create
- (AOwner: TComponent; pLembrete: TLembrete);
+procedure TfrmLembreteEditar.PreencherLembrete;
+begin
+  _Lembrete.Titulo    := EdtTitulo.Text;
+  _Lembrete.Descricao := MmDescricao.Text;
+  _Lembrete.DataHora  := DtpDataHora.DateTime;
+end;
+
+procedure TfrmLembreteEditar.PreencherTela;
+begin
+  EdtTitulo.Text       := _Lembrete.Titulo;
+  MmDescricao.Text     := _Lembrete.Descricao;
+  DtpDataHora.DateTime := _Lembrete.DataHora;
+end;
+
+constructor TFrmLembreteEditar.Create(AOwner: TComponent; pLembrete: TLembrete);
 begin
   inherited Create(AOwner);
   _LembreteDAO := TLembreteDAO.Create;
@@ -54,19 +68,20 @@ begin
       PreencherTela;
     end;
   except on e: exception do
-       raise Exception.Create(E.Message);
+    raise Exception.Create(E.Message);
   end;
 
 end;
 
 procedure TfrmLembreteEditar.bExcluirClick(Sender: TObject);
 begin
-close;
+  close;
 end;
 
 procedure TfrmLembreteEditar.bInserirClick(Sender: TObject);
 begin
   PreencherLembrete;
+
   if _LembreteDAO.Alterar(_Lembrete) then
   begin
     ShowMessage('Registro editado com sucesso');
@@ -85,18 +100,11 @@ begin
   end;
 end;
 
-procedure TfrmLembreteEditar.PreencherLembrete;
+procedure TfrmLembreteEditar.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
 begin
-  _Lembrete.Titulo    := EdtTitulo.Text;
-  _Lembrete.Descricao := MmDescricao.Text;
-  _Lembrete.DataHora  := DtpDataHora.DateTime;
+  if key = VK_ESCAPE then
+    close;
 end;
-
-procedure TfrmLembreteEditar.PreencherTela;
-  begin
-    EdtTitulo.Text       := _Lembrete.Titulo;
-    MmDescricao.Text     := _Lembrete.Descricao;
-    DtpDataHora.DateTime := _Lembrete.DataHora;
-  end;
 
 end.
